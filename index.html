@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Creative Project 3</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1> Geocaching in: {{geoLocation}} </h1>
+      <form v-on:submit.prevent="addItem">
+        <input type="text" v-model="geoLocation" placeholder="Location">
+        <button type="submit">Add</button>
+      </form>
+      <img v-bind:src="backgroundImg" alt="background Image">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
