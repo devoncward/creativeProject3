@@ -9,7 +9,6 @@ var app = new Vue ({
   },
   created() {
     this.getMountainImage();
-    this.getLongLat();
   },
   methods: {
     async getMountainImage() {
@@ -25,7 +24,7 @@ var app = new Vue ({
       }
     },
     async getLongLat() {
-      const url = "http://api.openweathermap.org/data/2.5/weather?q=" + "Provo" + ",US&units=imperial" + "&APPID=cf3be95cf53b4267405bcea8c73696ee";
+      const url = "http://api.openweathermap.org/data/2.5/weather?q=" + this.geoLocation + ",US&units=imperial" + "&APPID=cf3be95cf53b4267405bcea8c73696ee";
       const response = await fetch(url);
       const json = await response.json();
       console.log(json);
@@ -40,10 +39,7 @@ var app = new Vue ({
       const response = await fetch(url);
       const json = await response.json();
       console.log(json);
-
+      this.hikes = json.trails;
     }
   },
-  computed: {
-
-  }
 });

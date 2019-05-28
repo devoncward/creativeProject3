@@ -12,8 +12,11 @@
         <input type="text" v-model="geoLocation" placeholder="Location">
         <button type="submit">Add</button>
       </form>
+      <div v-for="hike in hikes">
+        <p> {{hike.name}} </p>
+      </div>
       <br>
-      <img v-bind:src="backgroundImg" alt="background Image">
+      <img v-bind:src="backgroundImg" alt="background Image" width="200" height="200">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
