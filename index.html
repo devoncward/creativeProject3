@@ -8,10 +8,11 @@
   <body>
     <div id="app">
       <h1> Geocaching in: {{geoLocation}} </h1>
-      <form v-on:submit.prevent="addItem">
+      <form v-on:submit.prevent="getLongLat">
         <input type="text" v-model="geoLocation" placeholder="Location">
         <button type="submit">Add</button>
       </form>
+      <br>
       <img v-bind:src="backgroundImg" alt="background Image">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
