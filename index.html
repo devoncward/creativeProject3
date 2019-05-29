@@ -6,18 +6,33 @@
     <title>Creative Project 3</title>
   </head>
   <body>
+
+
     <div id="app">
-      <h1> Geocaching in: {{geoLocation}} </h1>
-      <form v-on:submit.prevent="getLongLat">
-        <input type="text" v-model="geoLocation" placeholder="Location">
-        <button type="submit">Add</button>
-      </form>
+      
+      <div class="header">
+        <h1 class="title"> Geocaching in: {{geoLocation}} </h1>
+
+        <form v-on:submit.prevent="getLongLat" class="input">
+
+          <input type="text" v-model="geoLocation" placeholder="Location">
+          <button type="submit">Search</button>
+
+        </form>
+      </div>
+      
+
       <div v-for="hike in hikes">
         <p> {{hike.name}} </p>
       </div>
+
       <br>
+
       <img v-bind:src="backgroundImg" alt="background Image" width="200" height="200">
-    </div>
+
+
+
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
