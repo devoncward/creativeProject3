@@ -14,7 +14,7 @@ var app = new Vue ({
   methods: {
     async getMountainImage() {
       try {
-        const url = "https://source.unsplash.com/1600x900/?outdoors";
+        const url = "https://source.unsplash.com/1600x900/?hiking";
         const response = await axios.get(url)
         const data = response.config.url
         this.backgroundImg = data;
