@@ -1,10 +1,10 @@
 body {
-    background: url("https://source.unsplash.com/1600x900/?outdoors");
+    background: url("https://source.unsplash.com/1600x900/?hiking");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #464646;    
+    background-color: #464646;
 }
 
 * {
@@ -46,7 +46,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-grow: 4;
-    padding: 15px; 
+    padding: 15px;
 }
 
 #searchButton {
