@@ -74,3 +74,33 @@ body {
     width: 80%;
     background: rgb(241, 241, 241, 0.9);
 }
+
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(85, 158, 118);
+    border-radius: 10px;
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(17, 66, 107);
+    text-decoration: none;
+}
+a:active{
+    color: #0b7dda;
+}
+#footer {
+
+    position: fixed;
+    bottom: 0;
+    background: #5a5959;
+    color: #f3f1f1;
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px; 
+}
