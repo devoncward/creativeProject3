@@ -48,3 +48,26 @@ body {
     flex-grow: 4;
     padding: 15px; 
 }
+
+#searchButton {
+    width: 20%;
+    padding: 10px;
+    background: rgb(33, 150, 243, 0.6);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+#searchButton:hover {
+    background: #0b7dda;
+}
+#searchBar {
+
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: rgb(241, 241, 241, 0.9);
+}

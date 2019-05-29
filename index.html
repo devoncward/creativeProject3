@@ -11,12 +11,12 @@
     <div id="app">
       
       <div class="header">
-        <h1 class="title"> Geocaching in: {{geoLocation}} </h1>
+        <h1 class="title"> Trails near: {{geoLocation}} </h1>
 
         <form v-on:submit.prevent="getLongLat" class="input">
 
-          <input type="text" v-model="geoLocation" placeholder="Location">
-          <button type="submit">Search</button>
+          <input type="text" v-model="geoLocation" placeholder="Location" id="searchBar">
+          <button type="submit" id="searchButton">Search</button>
 
         </form>
       </div>
@@ -28,7 +28,7 @@
 
       <br>
 
-      <img v-bind:src="backgroundImg" alt="background Image" width="200" height="200">
+
 
 
 
