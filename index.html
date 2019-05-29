@@ -21,11 +21,25 @@
         </form>
       </div>
       
+      <div class="container">
+        <div v-for="hike in hikes">
+          <div class="item">
 
-      <div v-for="hike in hikes">
-        <p> {{hike.name}} </p>
+            <div class="header">
+              <h3 class="item"> {{hike.name}} </h3>
+              <sup class="item" style="padding-top:0px; padding-bottom:0px;"><i>Located in: {{hike.location}}</i></sup>
+              <div  v-if="hike.imgMedium != ''"  class="item">
+                  <img :src="hike.imgMedium" alt="hike image" class="item" style="width: 320px; height: 300px; padding: 0px;">
+              </div>
+              <p class="item"> {{hike.summary}} </p>
+              
+              
+            </div>
+            
+          </div>
+          
+        </div>
       </div>
-
       <br>
 
 

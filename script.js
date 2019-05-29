@@ -6,6 +6,7 @@ var app = new Vue ({
     geoLong: '',
     backgroundImg: '',
     hikes: {},
+    weather: {},
   },
   created() {
     this.getMountainImage();
@@ -31,6 +32,8 @@ var app = new Vue ({
       this.geoLong = json.coord.lon;
       this.geoLat = json.coord.lat;
       console.log("latitude: ", this.geoLat, " longitude: ", this.geoLong);
+      // this.weather = json;
+      // console.log("WEATHER: ", json)
       this.getHikingTrails();
     },
     async getHikingTrails() {
@@ -38,7 +41,7 @@ var app = new Vue ({
       console.log(url);
       const response = await fetch(url);
       const json = await response.json();
-      console.log(json);
+      console.log("HIKING JSON: ", json);
       this.hikes = json.trails;
     }
   },
