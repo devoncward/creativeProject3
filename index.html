@@ -36,6 +36,8 @@
               <br>
               <sup class="item" style="padding-top:0px; padding-bottom:0px;"><i>Hike duration: {{hike.length}} miles</i></sup>
               <br>
+              <sup class="item" style="padding-top:0px; padding-bottom:0px;"><i>Elevation Gain: {{hike.ascent}} ft</i></sup>
+              <br>
               <sup class="item" style="padding-top:0px; padding-bottom:0px;"><i>Trail Conditions: {{hike.conditionDetails}}</i></sup>
               <div  v-if="hike.imgMedium != ''"  class="item">
                   <img :src="hike.imgMedium" alt="hike image" class="item" style="width: 320px; height: 300px; padding: 0px;">
